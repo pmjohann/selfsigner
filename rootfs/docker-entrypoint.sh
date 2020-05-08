@@ -23,4 +23,4 @@ cat /req.conf | sed "s/__DOMAIN__/$1/g" > /tmp/req.conf
 openssl req -x509 -nodes -days $VALIDITY_DAYS -newkey rsa:$RSA_BITSIZE -keyout /out/key.pem -out /out/cert.pem -config /tmp/req.conf
 
 # VALIDATE GENERATED CERT
-openssl x509 -in /out/cert.pem -noout -text
+openssl x509 -in /out/cert.pem -noout -text -dates
