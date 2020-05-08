@@ -7,12 +7,12 @@ RSA_BITSIZE=4096
 VALIDITY_DAYS=3650
 
 # OVERRIDE RSA_BITSIZE IF NEEDED
-if [ -n $2 ]; then
+if [ ! -z $2 ]; then
     RSA_BITSIZE=$2
 fi
 
 # OVERRIDE VALIDITY IF NEEDED
-if [ -n $3 ]; then
+if [ ! -z $3 ]; then
     VALIDITY_DAYS=$3
 fi
 
